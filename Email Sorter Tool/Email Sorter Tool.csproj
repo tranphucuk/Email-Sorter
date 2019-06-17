@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E0E395E-C364-4763-BA55-A55F3CDAB0BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Email_Sorter_Tool</RootNamespace>
+    <AssemblyName>Email Sorter Tool</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>email_3EQ_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoItX3.Assembly">
+      <HintPath>F:\Library\lib\AutoItX3.Assembly.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.2" />
+    <Reference Include="DevExpress.Data.v17.2" />
+    <Reference Include="DevExpress.Images.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.2" />
+    <Reference Include="DevExpress.XtraBars.v17.2" />
+    <Reference Include="DevExpress.Sparkline.v17.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.2" />
+    <Reference Include="DevExpress.Printing.v17.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FoxLearn.License">
+      <HintPath>F:\Library\lib\FoxLearn.License.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>F:\Library\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OmegaLib">
+      <HintPath>F:\Library\lib\OmegaLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="thanhps42">
+      <HintPath>F:\Library\lib\thanhps42.dll</HintPath>
+    </Reference>
+    <Reference Include="thanhps42.BvSsh">
+      <HintPath>F:\Library\lib\thanhps42.BvSsh.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About Modules\AboutModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About Modules\AboutModule.Designer.cs">
+      <DependentUpon>AboutModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeModule\BvSshClient.cs" />
+    <Compile Include="HomeModule\Context Menu Strip\FrmShowResults.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeModule\Context Menu Strip\FrmShowResults.Designer.cs">
+      <DependentUpon>FrmShowResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeModule\EmailDetails.cs" />
+    <Compile Include="HomeModule\EventArgs\EmailQueueEventArgs.cs" />
+    <Compile Include="HomeModule\EventArgs\EmailSavedEventArgs.cs" />
+    <Compile Include="HomeModule\EventArgs\ErrorEmailEventArgs.cs" />
+    <Compile Include="HomeModule\EventArgs\StatusUpdateEventArgs.cs" />
+    <Compile Include="HomeModule\EventArgs\TotalSshUsedEventArgs.cs" />
+    <Compile Include="HomeModule\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeModule\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeModule\ScanInfo.cs" />
+    <Compile Include="HomeModule\SortEmailAsync.cs" />
+    <Compile Include="HomeModule\EventArgs\StatusUpdateEventArg.cs" />
+    <Compile Include="HomeModule\Sub Settings\EmailDetailsEventArg.cs" />
+    <Compile Include="HomeModule\Sub Settings\FrmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeModule\Sub Settings\FrmSettings.Designer.cs">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeModule\TaskManager.cs" />
+    <Compile Include="License\FileCipher.cs" />
+    <Compile Include="License\FrmLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License\FrmLicense.Designer.cs">
+      <DependentUpon>FrmLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License\LicenseInfo.cs" />
+    <Compile Include="License\LicenseInfoController.cs" />
+    <Compile Include="License\LicenseType.cs" />
+    <Compile Include="License\StringCipher.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\SettingsModule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsModule.Designer.cs">
+      <DependentUpon>SettingsModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SshDetail.cs" />
+    <Compile Include="Static\HomeStatic.cs" />
+    <Compile Include="Static\SettingStatic.cs" />
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About Modules\AboutModule.resx">
+      <DependentUpon>AboutModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeModule\Context Menu Strip\FrmShowResults.resx">
+      <DependentUpon>FrmShowResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeModule\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeModule\Sub Settings\FrmSettings.resx">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License\FrmLicense.resx">
+      <DependentUpon>FrmLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Settings\SettingsModule.resx">
+      <DependentUpon>SettingsModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start-iconx32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop-red-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus-symbol-inside-a-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-inbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm-clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm-clock %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unchecked1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unchecked2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-sign-in-a-black-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubbish-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-button-inside-black-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubbish-bin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-sign-in-a-black-circle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AutoItX3Lib">
+      <Guid>{F8937E53-D444-4E71-9275-35B64210CC3B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\l31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="email_3EQ_icon.ico" />
+    <Content Include="envelope %282%29.ico" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\check-mark.png" />
+    <None Include="Resources\information-button %282%291.png" />
+    <None Include="Resources\information-button %282%29.png" />
+    <None Include="Resources\information-button %281%291.png" />
+    <None Include="Resources\information-button %281%29.png" />
+    <None Include="Resources\information-button2.png" />
+    <None Include="Resources\information-button1.png" />
+    <None Include="Resources\folder %282%29.png" />
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
